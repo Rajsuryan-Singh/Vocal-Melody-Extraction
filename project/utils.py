@@ -95,9 +95,10 @@ def load_model(model_name):
 
 
     """
+    directory = "Pretrained_models/"
     ext = '.yaml'
-    model = model_from_yaml(open(model_name + ext).read())
-    model.load_weights(model_name + '_weights.h5')
+    model = model_from_yaml(open(directory + model_name + ext).read())
+    model.load_weights(directory + model_name + '_weights.h5')
 
     print("model " + model_name + " loaded")
     return model
